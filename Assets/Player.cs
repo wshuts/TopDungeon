@@ -14,13 +14,17 @@ namespace Assets
 
         private void FixedUpdate()
         {
-            moveDelta = Vector3.zero;
-
             var x = Input.GetAxisRaw("Horizontal");
             var y = Input.GetAxisRaw("Vertical");
 
-            Debug.Log(x);
-            Debug.Log(y);
+            moveDelta = new Vector3(x, y, 0);
+
+            if (moveDelta.x > 0)
+                transform.localScale = Vector3.one;
+            else if (moveDelta.x < 0)
+                transform.localScale = new Vector3(-1, 0, 0);
+            else
+                transform.localScale = transform.localScale;
         }
     }
 }
