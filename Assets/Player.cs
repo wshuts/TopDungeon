@@ -22,7 +22,7 @@ namespace Assets
             if (moveDelta.x > 0)
                 transform.localScale = Vector3.one;
             else if (moveDelta.x < 0)
-                transform.localScale = new Vector3(-1, 0, 0);
+                transform.localScale = new Vector3(-1, 1, 1);
             else
                 transform.localScale = transform.localScale;
         }
