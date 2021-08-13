@@ -25,6 +25,8 @@ namespace Assets
                 transform.localScale = new Vector3(-1, 1, 1);
             else
                 transform.localScale = transform.localScale;
+
+            transform.Translate(moveDelta * Time.deltaTime);
         }
     }
 }
